@@ -1,6 +1,10 @@
+---
+const { color } = Astro.props
+---
+
 <section
     class="hero-text-white font-gotham font-medium h-screen w-screen bg-black text-center relative"
-    data-header-color = 'white'
+    data-header-color = {color}
 >
     <div class="z-30 relative h-full flex flex-col">
         <h2 class="text-white pt-40 text-[40px] font-medium">

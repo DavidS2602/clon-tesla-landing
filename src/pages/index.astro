@@ -2,33 +2,160 @@
 import HeroSection from "../components/HeroSection.astro";
 import LandingHeader from "../components/LandingHeader.astro";
 import Layout from "../layouts/Layout.astro";
-import ModelY from "../components/Model-y.astro";
-import Model3 from "../components/Model-3.astro";
-import ModelS from "../components/Model-S.astro";
-import ModelX from "../components/Model-X.astro";
-import Powerwall from "../components/Powerwall.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="Tesla Landing">
 	<LandingHeader />
 	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
 		<div class="snap-center">
-			<HeroSection />
+			<Section
+				color="white"
+				title="Experimenta Tesla"
+				subtitle="Agenda una demostración de manejo hoy"
+			>
+				<div slot="footer">
+					<a
+						class=`border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20`
+						href="#"
+					>
+						Prueba de conducción
+					</a>
+				</div>
+				<video
+					slot="background"
+					class="object-cover h-screen w-screen"
+					autoplay
+					muted
+					loop
+					src="../../public/public_video.webm"></video>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<Model3 />
+			<Section color="black" title="Model 3">
+				<div slot="footer">
+					<a
+						class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
+						href="#"
+					>
+						Orden personalizada
+					</a>
+					<a
+						class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
+						href="#"
+					>
+						Demostración de manejo
+					</a>
+				</div>
+				<img
+					slot="background"
+					src="/public/Model-3.avif"
+					alt=""
+					class="object-cover object-center h-full w-full"
+				/>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<ModelY />
+			<Section color="black" title="Model Y">
+				<div slot="footer">
+					<a
+						class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
+						href="#"
+					>
+						Orden personalizada
+					</a>
+					<a
+						class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
+						href="#"
+					>
+						Demostración de manejo
+					</a>
+				</div>
+				<img
+					slot="background"
+					src="/public/Model-y.avif"
+					alt=""
+					class="object-cover h-screen w-screen"
+				/>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<ModelS />
+			<Section
+				color="black"
+				title="Model S"
+				subtitle="Programe una demostración de manejo"
+			>
+				<div slot="footer">
+					<a
+						class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
+						href="#"
+					>
+						Explorar inventario
+					</a>
+					<a
+						class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
+						href="#"
+					>
+						Pedido personalizado
+					</a>
+				</div>
+				<img
+					slot="background"
+					src="/public/Model-S.avif"
+					alt=""
+					class="object-cover h-screen w-screen"
+				/>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<ModelX />
+			<Section
+				color="black"
+				title="Model X"
+				subtitle="Programe una demostración de manejo"
+			>
+				<div slot="footer">
+					<a
+						class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
+						href="#"
+					>
+						Orden personalizada
+					</a>
+					<a
+						class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
+						href="#"
+					>
+						Ver inventario
+					</a>
+				</div>
+				<img
+					slot="background"
+					src="/public/Model-X.avif"
+					alt=""
+					class="object-cover h-screen w-screen"
+				/>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<Powerwall />
+			<Section
+				color="black"
+				title="Energía solar y Powerwall"
+				subtitle="Totalmente eléctrico"
+			>
+				<div slot="footer">
+					<a
+						class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20"
+						href="#"
+					>
+						Mas información
+					</a>
+				</div>
+				<img
+					slot="background"
+					src="/public/Powerwall.avif"
+					alt=""
+					class="object-cover h-screen w-screen"
+				/>
+			</Section>
 		</div>
 	</main>
 </Layout>
