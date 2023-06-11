@@ -1,38 +1,30 @@
-<section
-    class="landing-section charge-text-white font-gotham font-medium h-screen w-screen bg-black text-center relative"
-    data-header-color = 'black'
+---
+import Section from "./Section.astro";
+---
+
+<Section
+    color="black"
+    title="Model S"
+    subtitle="Programe una demostración de manejo"
 >
-    <div class="z-30 relative h-full flex flex-col">
-        <h2 class="text-gray-900 pt-28 text-[40px] font-medium leading-[48px]">
-            Model S
-        </h2>
-        <p class="text-sm text-gray-600 underline">
-            Programa una demostración de manejo
-        </p>
+    <div slot="footer">
+        <a
+            class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
+            href="#"
+        >
+            Explorar inventario
+        </a>
+        <a
+            class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
+            href="#"
+        >
+            Pedido personalizado
+        </a>
     </div>
-
-    <footer class="absolute bottom-0 left-0 right-0 z-40 justify-between mobile:mx-5">
-        <div>
-            <a
-                class="border-[3px] border-black bg-black text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 mobile:w-full mobile:mb-10"
-                href="#"
-            >
-                Explorar inventario
-            </a>
-            <a
-                class="border-[3px] border-white bg-white/5 text-sm rounded font-medium text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20 ml-4 mobile:w-full mobile:ml-0"
-                href="#"
-            >
-                Pedido personalizado
-            </a>
-        </div>
-    </footer>
-
-    <div class="absolute top-0 bottom-0 left-0 right-0 z-0 overflow-x-hidden">
-        <img
-            src="/public/Model-S.avif"
-            alt=""
-            class="object-cover h-screen w-screen"
-        />
-    </div>
-</section>
+    <img
+        slot="background"
+        src="/public/Model-S.avif"
+        alt=""
+        class="object-cover h-screen w-screen"
+    />
+</Section>

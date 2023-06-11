@@ -1,37 +1,25 @@
 ---
 const { color } = Astro.props
+import Section from "./Section.astro";
 ---
-
-<section
-    class="hero-text-white font-gotham font-medium h-screen w-screen bg-black text-center relative"
-    data-header-color = {color}
+<Section
+color="white"
+title="Experimenta Tesla"
+subtitle="Agenda una demostración de manejo hoy"
 >
-    <div class="z-30 relative h-full flex flex-col">
-        <h2 class="text-white pt-40 text-[40px] font-medium">
-            Experimenta Tesla
-        </h2>
-        <p class="text-white text-sm">
-            Programa una prueba de conducción hoy mismo
-        </p>
-    </div>
-
-    <footer class="absolute bottom-0 left-0 right-0 z-40">
-        <div>
-            <a
-                class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20"
-                href="#"
-            >
-                Prueba de conducción
-            </a>
-        </div>
-    </footer>
-
-    <div class="absolute top-0 bottom-0 left-0 right-0 z-10 overflow-x-hidden">
-        <video
-            class="object-cover h-screen w-screen"
-            autoplay
-            muted
-            loop
-            src="../../public/public_video.webm"></video>
-    </div>
-</section>
+<div slot="footer">
+    <a
+        class=`border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors mb-20`
+        href="#"
+    >
+        Prueba de conducción
+    </a>
+</div>
+<video
+    slot="background"
+    class="object-cover h-screen w-screen"
+    autoplay
+    muted
+    loop
+    src="../../public/public_video.webm"></video>
+</Section>
